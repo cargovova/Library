@@ -37,7 +37,7 @@ public class DeleteServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text.html; charset=UTF-8");
 		int bookID = Integer.parseInt(request.getParameter("bookID"));
-		DeleteQuery dq = new DeleteQuery("my_library", "root", "root");
+		DeleteQuery dq = new DeleteQuery("my_library", "user", "password");
 		dq.doDelete(bookID);
 		String url = "read";
 		

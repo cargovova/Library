@@ -46,9 +46,9 @@ public class AddServlet extends HttpServlet {
 		book.setAuthor(author);
 		book.setPages(pages);
 		
-		AddQuery aq = new AddQuery("my_library", "root", "root");
+		AddQuery aq = new AddQuery("my_library", "user", "password");
 		aq.doAdd(book);
-		String url = "/read";
+		String url = "read";
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);

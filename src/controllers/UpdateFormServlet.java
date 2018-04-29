@@ -37,7 +37,7 @@ public class UpdateFormServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int bookID = Integer.parseInt(request.getParameter("bookID"));
-		ReadRecord rr = new ReadRecord("my_library", "root", "root", bookID);
+		ReadRecord rr = new ReadRecord("my_library", "user", "password", bookID);
 		rr.doRead();
 		Book book = rr.getBook();
 		request.setAttribute("book", book);

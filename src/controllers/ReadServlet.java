@@ -41,7 +41,7 @@ public class ReadServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text.html; charset=UTF-8");
-		ReadQuery rq = new ReadQuery("my_library", "root", "root");
+		ReadQuery rq = new ReadQuery("my_library", "user", "password");
 
 		rq.doRead();
 		String table = rq.getHTMLTable();

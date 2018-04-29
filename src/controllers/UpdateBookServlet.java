@@ -47,7 +47,7 @@ public class UpdateBookServlet extends HttpServlet {
 		book.setAuthor(author);
 		book.setPages(pages);
 		
-		UpdateQuery uq = new UpdateQuery("mu_library", "root", "root");
+		UpdateQuery uq = new UpdateQuery("mu_library", "user", "password");
 		uq.doUpdate(book);
 		
 		String url = "read";
