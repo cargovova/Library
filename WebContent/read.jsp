@@ -12,7 +12,7 @@ String table = (String)request.getAttribute("table");
 </head>
 <body>
 
-<h1>My Library</h1>
+<h1>Моя библиотека</h1>
 
 <%= table %>
 <br>
